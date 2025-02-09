@@ -118,7 +118,7 @@ You can query the database directly using SQLite commands or integrate it into o
 
 ## Contributing
 
-We welcome contributions to improve PaperEngine! Here's how you can help:
+We welcome contributions to improve PaperEngine! 
 1. Fork the repository and create a new branch.
 2. Make your changes and ensure all tests pass:
    ```bash
@@ -133,14 +133,6 @@ For major changes, please open an issue first to discuss your ideas.
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-## Acknowledgments
-
-- Inspired by best practices for README files [[1]].
-- Built using Python libraries like `requests`, `rich`, and `lxml`.
-- Thanks to the open-source community for providing tools and APIs that power this project.
 
 ---
 
