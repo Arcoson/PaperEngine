@@ -2,7 +2,7 @@
 
 **PaperEngine** is a powerful command-line tool designed to aggregate and search research papers from multiple sources, including **Arxiv**, **PubMed**, and **Semantic Scholar**. (Google Scholar is temporarily disabled but can be re-enabled easily.)
 
-With its intuitive interface and advanced features, PaperEngine makes it easy to discover, filter, and save academic papers for your research needs.
+It is easy to discover, filter, and save academic papers for your research needs.
 
 ---
 
@@ -35,7 +35,7 @@ With its intuitive interface and advanced features, PaperEngine makes it easy to
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/arcoson/PaperEngine.git
+   git clone https://github.com/Arcoson/PaperEngine.git
    cd PaperEngine
    ```
 
@@ -50,7 +50,7 @@ With its intuitive interface and advanced features, PaperEngine makes it easy to
    pip install -r requirements.txt
    ```
 
-4. Set up environment variables:
+4. Set up environment variables: # not required 
    - Create a `.env` file in the root directory and add any required API keys:
      ```env
      ARXIV_API_KEY=  # Not required
@@ -67,13 +67,13 @@ With its intuitive interface and advanced features, PaperEngine makes it easy to
 ### Aggregate Papers
 Aggregate papers from multiple sources based on a query:
 ```bash
-python src/cli.py aggregate --query "machine learning" --limit 10
+python3 src/cli.py aggregate --query "machine learning" --limit 10
 ```
 
 ### Search Papers
 Search for specific papers with optional filters:
 ```bash
-python src/cli.py search --query "neural networks" --source arxiv --year 2022
+python3 src/cli.py search --query "neural networks" --source arxiv --year 2022
 ```
 
 ### View Saved Papers
@@ -114,21 +114,6 @@ PaperEngine uses an SQLite database (`papers.db`) to store fetched papers. The d
 
 You can query the database directly using SQLite commands or integrate it into other tools.
 
----
-
-## Contributing
-
-We welcome contributions to improve PaperEngine! 
-1. Fork the repository and create a new branch.
-2. Make your changes and ensure all tests pass:
-   ```bash
-   pytest src/tests/
-   ```
-3. Submit a pull request with a detailed description of your changes.
-
-For major changes, please open an issue first to discuss your ideas.
-
----
 
 ## License
 
