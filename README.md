@@ -4,24 +4,11 @@
 
 It is easy to discover, filter, and save academic papers for your research needs.
 
----
-
-## Table of Contents
-1. [Features](#features)
-2. [Installation](#installation)
-3. [Usage](#usage)
-4. [Configuration](#configuration)
-5. [Database](#database)
-6. [Contributing](#contributing)
-7. [License](#license)
-
----
 
 ## Features
 - **Multi-Source Aggregation**: Fetch papers from Arxiv, PubMed, and Semantic Scholar.
 - **Advanced Search**: Filter results by source, publication year, and author.
 - **Persistent Storage**: Save aggregated papers to an SQLite database for future reference.
-- **Beautiful CLI Interface**: Colorful and user-friendly output powered by the `rich` library.
 - **Customizable Preferences**: Configure default settings via `preferences.json`.
 
 ---
