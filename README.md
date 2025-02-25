@@ -4,40 +4,36 @@
 
 It is easy to discover, filter, and save academic papers for your research needs.
 
-
-## Features
-- **Multi-Source Aggregation**: Fetch papers from Arxiv, PubMed, and Semantic Scholar.
-- **Advanced Search**: Filter results by source, publication year, and author.
-- **Persistent Storage**: Save aggregated papers to an SQLite database for future reference.
-- **Customizable Preferences**: Configure default settings via `preferences.json`.
-
 ---
 
 ## Installation
 
 ### Prerequisites
+
 - Python 3.8 or higher
 - `pip` (Python package manager)
 
 ### Steps
+
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/Arcoson/PaperEngine.git
    cd PaperEngine
    ```
-
 2. Create and activate a virtual environment:
+
    ```bash
    python3 -m venv venv
    source venv/bin/activate
    ```
-
 3. Install dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
+4. Not Required (Really not needed unless you want to surpass ratelimits)- Set up environment variables:
 
-4. Set up environment variables: # not required 
    - Create a `.env` file in the root directory and add any required API keys:
      ```env
      ARXIV_API_KEY=  # Not required
@@ -52,19 +48,25 @@ It is easy to discover, filter, and save academic papers for your research needs
 ## Usage
 
 ### Aggregate Papers
+
 Aggregate papers from multiple sources based on a query:
+
 ```bash
 python3 src/cli.py aggregate --query "machine learning" --limit 10
 ```
 
 ### Search Papers
+
 Search for specific papers with optional filters:
+
 ```bash
-python3 src/cli.py search --query "neural networks" --source arxiv --year 2022
+python3 src/cli.py search --query "neural networks" --source arxiv
 ```
 
 ### View Saved Papers
+
 All fetched papers are saved to an SQLite database (`papers.db`). You can view them using the SQLite CLI:
+
 ```bash
 sqlite3 papers.db "SELECT * FROM papers;"
 ```
@@ -79,6 +81,7 @@ You can customize the behavior of PaperEngine by modifying the following files:
 - **`.env`**: Environment variables for API keys and database paths.
 
 Example `preferences.json`:
+
 ```json
 {
     "default_query_limit": 10,
@@ -94,13 +97,13 @@ Example `preferences.json`:
 ## Database
 
 PaperEngine uses an SQLite database (`papers.db`) to store fetched papers. The database schema includes the following fields:
+
 - `title`: Title of the paper.
 - `authors`: Comma-separated list of authors.
 - `published_date`: Publication date of the paper.
 - `source`: Source of the paper (e.g., Arxiv, PubMed).
 
 You can query the database directly using SQLite commands or integrate it into other tools.
-
 
 ## License
 

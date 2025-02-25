@@ -3,6 +3,10 @@
 import argparse
 from rich.console import Console
 from rich.table import Table
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from src.aggregator.core import aggregate_papers
 from src.aggregator.search.engine import search_papers
 from src.aggregator.utils.logger import setup_logger

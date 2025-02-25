@@ -33,3 +33,4 @@ var/
 
 # SQLite database
 papers.db
+.DS_Store

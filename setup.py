@@ -6,13 +6,13 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="PaperEngine",
-    version="1.0.0",
+    version="1.1.0",
     author="Arcoson",
-    author_email="your_email@example.com",
+    author_email="hylendust@gmail.com",
     description="A command-line tool to aggregate and search research papers from multiple sources.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/PaperEngine",
+    url="https://github.com/Arcoson/PaperEngine",
     packages=find_packages(where="src"),  # Find packages in the `src` directory
     package_dir={"": "src"},  # Specify that packages are under `src`
     include_package_data=True,
